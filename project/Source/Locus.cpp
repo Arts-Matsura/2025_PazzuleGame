@@ -7,7 +7,7 @@ Locus::Locus()
 	hImage = LoadGraph("data/Effect/SlashLocus.png");
 //	hImage = LoadGraph("data/2D/Swordbout_logo.png");
 	assert(hImage > 0);
-	SceneManager::CurrentScene()->SetDrawOrder(this, 200);
+	//SceneManager::CurrentScene()->SetDrawOrder(this, 200);
 }
 
 Locus::~Locus()

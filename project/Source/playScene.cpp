@@ -1,11 +1,8 @@
 #include "playScene.h"
 #include "../Library/sceneManager.h"
-#include "DebugScreen.h"
 #include <DxLib.h>
 #include "Player.h"
 #include "Ground.h"
-#include "Golem.h"
-#include "Goblin.h"
 #include "CsvReader.h"
 #include "StageObj.h"
 #include "StageObjManager.h"
@@ -33,7 +30,7 @@ PlayScene::PlayScene()
 	Instantiate<Ground>();
 	Instantiate<Light>();
 	Camera* cam = Instantiate<Camera>();
-	SetDrawOrder(cam, -1000); // ç≈èâÇ…Ç‚ÇÈ
+	//SetDrawOrder(cam, -1000); // ç≈èâÇ…Ç‚ÇÈ
 	Instantiate<Sky>();
 	Player* p = Instantiate<Player>();
 	Instantiate<Fire>();

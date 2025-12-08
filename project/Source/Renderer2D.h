@@ -1,6 +1,6 @@
 #pragma once
 #include "../Library/myDxLib.h"
-#include "config.h"
+#include "Screen.h"
 
 namespace Renderer
 {

@@ -2,7 +2,6 @@
 #include <assert.h>
 #include "../Library/time.h"
 #include "Ground.h"
-#include "Golem.h"
 #include "CsvReader.h"
 #include "StageObjManager.h"
 #include "Camera.h"
@@ -203,24 +202,7 @@ void Player::BeforeAttack()
 
 bool Player::Attack()
 {
-	// 今のサーベルの２点を取得
-	VECTOR sabelRoot = VGet(0, 0, 0) * matSabel;
-	VECTOR sabelTip = VGet(0, -100, 0) * matSabel;
-	locus->SetPosition(sabelRoot, sabelTip);
-
-	bool ret = false;
-	std::list<Golem*> golems = FindGameObjects<Golem>();
-	for (std::list<Golem*>::iterator itr = golems.begin();
-							itr != golems.end(); itr++) {
-		Golem* pGolem = *itr;
-		if (pGolem != nullptr) {
-			ret |= pGolem->CollisionAttacked(sabelRoot, sabelTip, prevSabelRoot, prevSabelTip);
-		}
-	}
-	
-	prevSabelRoot = sabelRoot;
-	prevSabelTip = sabelTip;
-	return ret;
+	return false;
 }
 
 VECTOR Player::padInput()

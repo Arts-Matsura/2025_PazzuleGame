@@ -1,78 +1,109 @@
 #pragma once
+/// <summary>
+/// ゲームオブジェクトの基底クラス
+/// </summary>
+/// <author>N.Hanai</author>
+
 #include "myDxLib.h"
 #include <string>
-#include "sceneBase.h"
+#include "ObjectManager.h"
+#include "SceneManager.h"
+#include "Time.h"
 
-class GameObject {
+/// <summary>
+/// これを継承したクラスのインスタンスは、ObjectManagerで管理され、
+/// Update()とDraw()が自動で呼ばれます
+/// </summary>
+class GameObject
+{
 public:
-	GameObject() : m_pScene(nullptr), m_pParent(nullptr), m_destroy(false), m_tag("") {}
-	GameObject(SceneBase* scene) : m_pScene(scene), m_pParent(nullptr), m_destroy(false), m_tag("") {}
-	GameObject(GameObject* object) : m_pScene(nullptr), m_pParent(object), m_destroy(false), m_tag("") {}
-	GameObject(SceneBase* scene, GameObject* object) : m_pScene(scene), m_pParent(object), m_destroy(false), m_tag("") {}
-	virtual ~GameObject() {}
+	GameObject() : tag(""), destroy(false), dontDestroy(false), drawOrder(0) { ObjectManager::Push(this); }
+	virtual ~GameObject() { ObjectManager::Pop(this); }
+
+	/// <summary>
+	/// 自動で呼ばれない
+	/// </summary>
 	virtual void Start() {}
+
+	/// <summary>
+	/// 毎フレームの更新処理のために呼ばれます
+	/// </summary>
 	virtual void Update() {}
+
+	/// <summary>
+	/// 毎フレームの描画処理のために呼ばれます
+	/// </summary>
 	virtual void Draw() {}
 
 	/// <summary>
-	/// 自分のインスタンスを削除する時に呼び出す
-	/// 次回のUpdateの前に削除される
+	/// 自分のインスタンスを削除する時に呼び出してください
+	/// 次回のUpdateの前に削除されます
 	/// </summary>
-	void DestroyMe() { m_destroy = true; }
+	void DestroyMe() { destroy = true; }
 
 	/// <summary>
-	/// インスタンスが削除要求されているかを調べる
-	/// 主に、SceneManagerでチェックしている
+	/// DestroyMeされているか調べる
+	/// この関数はObjectManagerが使っています。
 	/// </summary>
-	/// <returns></returns>
-	bool IsDestroy() const { return m_destroy; }
+	/// <returns>DestroyMeされているとtrue</returns>
+	inline bool DestroyRequested() const { return destroy; }
+
+	/// <summary>
+	/// シーンチェンジするときに、削除されなくする
+	/// </summary>
+	/// <param name="sw">書かなければtrue、falseにすると削除される</param>
+	void DontDestroyOnSceneChange(bool sw = true) { dontDestroy = sw; }
+
+	/// <summary>
+	/// DontDestroyが設定されているか調べる
+	/// この関数はObjectManagerが使っています
+	/// </summary>
+	/// <returns>DontDetroyになっていればtrue</returns>
+	bool IsDontDestroy() const { return dontDestroy; }
+
+	/// <summary>
+	/// 描画の優先順位を指定します
+	/// 数値が高いほど、先に描画されるので、
+	/// 2Dであれば、奥に表示されます
+	/// 何も指定しなければ０です
+	/// </summary>
+	/// <param name="odr">描画順位</param>
+	void SetDrawOrder(int order)
+	{
+		drawOrder = order;
+		ObjectManager::SortByDrawOrder();
+	}
+
+	/// <summary>
+	/// 描画の優先順位を取得します
+	/// </summary>
+	/// <returns>描画優先順位</returns>
+	inline int GetDrawOrder() const { return drawOrder; }
 
 	/// <summary>
 	/// タグをつける
 	/// タグは１つだけ付けることができます
 	/// </summary>
 	/// <param name="_tag">タグ</param>
-	void SetTag(std::string _tag) { m_tag = _tag; }
+	void SetTag(std::string _tag) { tag = _tag; }
 
 	/// <summary>
 	/// 指定されたタグと同じかを返す
 	/// </summary>
 	/// <param name="_tag">タグ</param>
 	/// <returns>同じであればtrue</returns>
-	bool IsTag(std::string _tag) const { return m_tag == _tag; }
-
-	/// <summary>
-	/// タグを取得する
-	/// </summary>
-	/// <returns>設定されているタグ</returns>
-	const std::string& GetTag() const { return m_tag; }
-
-	/// <summary>
-	/// 所属するシーンを返す
-	/// </summary>
-	/// <returns>所属するシーンのポインター</returns>
-	SceneBase* GetScene() const { return m_pScene; }
-
-	/// <summary>
-	/// シーンのポインターを保存する
-	/// </summary>
-	/// <returns>所属するシーンのポインター</returns>
-	void SetScene(SceneBase* _scene) { m_pScene = _scene; }
-
-	/// <summary>
-	/// 親のオブジェクトを返す
-	/// </summary>
-	/// <returns>親オブジェクトのポインター</returns>
-	GameObject* GetParent() const { return m_pParent; }
-
-	/// <summary>
-	/// 親のオブジェクトを返す
-	/// </summary>
-	/// <returns>親オブジェクトのポインター</returns>
-	void SetParent(GameObject* _parent) { m_pParent = _parent; }
+	bool IsTag(std::string _tag) const { return tag == _tag; }
 private:
-	SceneBase* m_pScene;   // 所属するシーン
-	GameObject* m_pParent; // 親のオブジェクト
-	bool m_destroy;        // 自分を削除するか否か
-	std::string m_tag;     // タグ
+	std::string tag;     // タグ
+	bool destroy;
+	bool dontDestroy;
+	int drawOrder;
 };
+
+// 旧バージョンとの互換性のため残しています。
+// 削除予定のため、使わないでください。
+template <class C>
+C* Instantiate()
+{
+	return new C();
+}
