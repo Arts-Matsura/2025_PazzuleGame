@@ -112,8 +112,8 @@
       <Filter>TitleScene</Filter>
     </ClCompile>
     <ClCompile Include="Source\TIle.cpp" />
-    <ClCompile Include="Source\cloud.cpp">
-      <Filter>01.bannai</Filter>
+    <ClCompile Include="Source\control.cpp">
+      <Filter>tamada</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -241,8 +241,8 @@
     <ClInclude Include="Source\TIle.h">
       <Filter>TitleScene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\cloud.h">
-      <Filter>01.bannai</Filter>
+    <ClInclude Include="Source\control.h">
+      <Filter>tamada</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -267,8 +267,8 @@
     <Filter Include="PlayScene\Particles">
       <UniqueIdentifier>{447d26fd-7b62-4d93-95be-94eab0434a39}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.bannai">
-      <UniqueIdentifier>{421a5997-812e-4a20-ab9f-7b9e4fd98baf}</UniqueIdentifier>
+    <Filter Include="tamada">
+      <UniqueIdentifier>{79880427-1ceb-4302-9a2f-473f034447ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
