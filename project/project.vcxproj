@@ -145,6 +145,7 @@
     <ClInclude Include="Source\Animator.h" />
     <ClInclude Include="Source\bootScene.h" />
     <ClInclude Include="Source\Camera.h" />
+    <ClInclude Include="Source\cloud.h" />
     <ClInclude Include="Source\component.h" />
     <ClInclude Include="Source\config.h" />
     <ClInclude Include="Source\CsvReader.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="Source\Animator.cpp" />
     <ClCompile Include="Source\bootScene.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\cloud.cpp" />
     <ClCompile Include="Source\CsvReader.cpp" />
     <ClCompile Include="Source\dashParticle.cpp" />
     <ClCompile Include="Source\debugScreen.cpp" />
