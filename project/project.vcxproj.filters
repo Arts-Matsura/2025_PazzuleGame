@@ -111,12 +111,14 @@
     <ClCompile Include="Source\TileManager.cpp">
       <Filter>TitleScene</Filter>
     </ClCompile>
-    <ClCompile Include="Source\TIle.cpp" />
     <ClCompile Include="Source\control.cpp">
       <Filter>tamada</Filter>
     </ClCompile>
     <ClCompile Include="Source\cloud.cpp">
       <Filter>z_bannnai</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TIle.cpp">
+      <Filter>TitleScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

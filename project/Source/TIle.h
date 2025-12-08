@@ -7,4 +7,5 @@ public:
 	~Tile();
 
 	void Draw();
+	int id;
 };
