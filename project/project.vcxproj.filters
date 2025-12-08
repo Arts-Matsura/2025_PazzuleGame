@@ -105,6 +105,13 @@
     <ClCompile Include="Source\Fire.cpp">
       <Filter>PlayScene\Particles</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GameMain.cpp">
+      <Filter>TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TileManager.cpp">
+      <Filter>TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TIle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\config.h" />
@@ -221,6 +228,15 @@
     </ClInclude>
     <ClInclude Include="Source\Fire.h">
       <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameMain.h">
+      <Filter>TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TileManager.h">
+      <Filter>TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\TIle.h">
+      <Filter>TitleScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

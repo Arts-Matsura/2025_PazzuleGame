@@ -151,6 +151,7 @@
     <ClInclude Include="Source\dashParticle.h" />
     <ClInclude Include="Source\debugScreen.h" />
     <ClInclude Include="Source\Fire.h" />
+    <ClInclude Include="Source\GameMain.h" />
     <ClInclude Include="Source\Goblin.h" />
     <ClInclude Include="Source\Golem.h" />
     <ClInclude Include="Source\Ground.h" />
@@ -173,6 +174,8 @@
     <ClInclude Include="Source\sparksManager.h" />
     <ClInclude Include="Source\StageObj.h" />
     <ClInclude Include="Source\StageObjManager.h" />
+    <ClInclude Include="Source\TIle.h" />
+    <ClInclude Include="Source\TileManager.h" />
     <ClInclude Include="Source\timer.h" />
     <ClInclude Include="Source\titleScene.h" />
     <ClInclude Include="Source\Transform.h" />
@@ -191,6 +194,7 @@
     <ClCompile Include="Source\dashParticle.cpp" />
     <ClCompile Include="Source\debugScreen.cpp" />
     <ClCompile Include="Source\Fire.cpp" />
+    <ClCompile Include="Source\GameMain.cpp" />
     <ClCompile Include="Source\Goblin.cpp" />
     <ClCompile Include="Source\Golem.cpp" />
     <ClCompile Include="Source\Ground.cpp" />
@@ -212,6 +216,8 @@
     <ClCompile Include="Source\sparksManager.cpp" />
     <ClCompile Include="Source\StageObj.cpp" />
     <ClCompile Include="Source\StageObjManager.cpp" />
+    <ClCompile Include="Source\TIle.cpp" />
+    <ClCompile Include="Source\TileManager.cpp" />
     <ClCompile Include="Source\timer.cpp" />
     <ClCompile Include="Source\titleScene.cpp" />
   </ItemGroup>

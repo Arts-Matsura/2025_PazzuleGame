@@ -3,11 +3,12 @@
 #include "DebugScreen.h"
 #include <vector>
 #include "../Library/time.h"
-
+#include "GameMain.h"
 
 
 TitleScene::TitleScene()
 {
+	new GameMain();
 }
 
 TitleScene::~TitleScene()
