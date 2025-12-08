@@ -115,6 +115,9 @@
     <ClCompile Include="Source\control.cpp">
       <Filter>tamada</Filter>
     </ClCompile>
+    <ClCompile Include="Source\cloud.cpp">
+      <Filter>z_bannnai</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\config.h" />
@@ -244,6 +247,9 @@
     <ClInclude Include="Source\control.h">
       <Filter>tamada</Filter>
     </ClInclude>
+    <ClInclude Include="Source\cloud.h">
+      <Filter>z_bannnai</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">
@@ -269,6 +275,9 @@
     </Filter>
     <Filter Include="tamada">
       <UniqueIdentifier>{79880427-1ceb-4302-9a2f-473f034447ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="z_bannnai">
+      <UniqueIdentifier>{9bd50f35-f9b0-4526-b1ea-b51060efee13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
