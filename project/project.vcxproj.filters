@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\sceneFactory.cpp" />
+    <ClCompile Include="Library\app.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\sceneManager.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\main.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\bootScene.cpp">
+      <Filter>BootScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\titleScene.cpp">
+      <Filter>TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\playScene.cpp">
+      <Filter>PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\debugScreen.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\sceneBase.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\resourceLoader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\time.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\timer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ManagerController.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SoundManager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Animator.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CsvReader.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Goblin.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Golem.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ground.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Light.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Locus.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object3D.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Player.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SingletonSample.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sky.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StageObj.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\StageObjManager.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MeteorManager.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Meteor.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\dashParticle.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Smoke.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sparkle.cpp" />
+    <ClCompile Include="Source\sparks.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sparksManager.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fire.cpp">
+      <Filter>PlayScene\Particles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\config.h" />
+    <ClInclude Include="Source\sceneFactory.h" />
+    <ClInclude Include="Library\app.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\sceneManager.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\sceneBase.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\gameObject.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\bootScene.h">
+      <Filter>BootScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\playScene.h">
+      <Filter>PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\debugScreen.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\myDxLib.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\component.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\resourceLoader.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\time.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\timer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\titleScene.h">
+      <Filter>TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SoundManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ManagerController.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Animator.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CsvReader.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Goblin.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Golem.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ground.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Key.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Light.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locus.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object3D.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Player.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SingletonSample.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sky.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StageObj.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StageObjManager.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Meteor.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MeteorManager.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Transform.h" />
+    <ClInclude Include="Source\dashParticle.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Smoke.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\sparkle.h" />
+    <ClInclude Include="Source\sparks.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\sparksManager.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fire.h">
+      <Filter>PlayScene\Particles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Library">
+      <UniqueIdentifier>{208c2106-181f-415c-a2e8-fa160c7f8651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BootScene">
+      <UniqueIdentifier>{4e7a122b-01b5-4a1f-bdd8-381c4cb2403d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitleScene">
+      <UniqueIdentifier>{a52f9c67-9c6c-4376-8f4c-07a10ecbc3db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{826397a3-7051-44be-b23c-f5dda703c9f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayScene">
+      <UniqueIdentifier>{8123ada4-16d1-40da-a8f3-3f9e93aafb30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayScene\Main">
+      <UniqueIdentifier>{80e3a14f-d765-460d-bf01-62fa31c1e95f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayScene\Particles">
+      <UniqueIdentifier>{447d26fd-7b62-4d93-95be-94eab0434a39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
