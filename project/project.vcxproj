@@ -166,6 +166,7 @@
     <ClInclude Include="Source\Object3D.h" />
     <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\playScene.h" />
+    <ClInclude Include="Source\Renderer2D.h" />
     <ClInclude Include="Source\sceneFactory.h" />
     <ClInclude Include="Source\SingletonSample.h" />
     <ClInclude Include="Source\Sky.h" />

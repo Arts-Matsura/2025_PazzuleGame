@@ -2,7 +2,7 @@
 
 TileManager::TileManager()
 {
-	
+	CreateTiles(4, 4);
 }
 
 TileManager::~TileManager()
@@ -15,6 +15,7 @@ void TileManager::Update()
 
 void TileManager::Draw()
 {
+	int test = 0;
 	for(int h = 0; h < tile_list.size(); h++)
 	{
 		for(int w = 0; w < tile_list[h].size(); w++)
@@ -37,8 +38,9 @@ void TileManager::CreateTiles(int height, int width)
 	{
 		for (int w = 0; w < width; w++)
 		{
-			//tile_list[h][w] = new Tile(id);
-			tile_list[h][w] = new Tile();
+			Tile* p = new Tile(id);
+			p->SetTile(Vector2I(w, h), 100.0f);
+			tile_list[h][w] = p;
 		}
 	}
 }

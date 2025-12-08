@@ -10,7 +10,11 @@ public:
 	~Tile();
 
 	void Draw();
-	void setTile(Vector2I _delta);
+
+	void SetTile(const Vector2I& _delta, float tileSize);
+
+//private:
+
 	int id;
 	Vector2I delta;
 	Transform transform;

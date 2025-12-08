@@ -252,6 +252,9 @@
     <ClInclude Include="Source\cloud.h">
       <Filter>z_bannnai</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Renderer2D.h">
+      <Filter>TitleScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">

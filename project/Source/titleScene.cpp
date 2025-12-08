@@ -8,7 +8,7 @@
 
 TitleScene::TitleScene()
 {
-	new GameMain();
+	new GameMain();//CoGƒo[ƒWƒ‡ƒ“‚ªˆá‚¤(4.1ˆÈã)
 }
 
 TitleScene::~TitleScene()
@@ -23,7 +23,7 @@ void TitleScene::Update()
 
 void TitleScene::Draw()
 {
-	
+	DrawString(0, 0, "Title Scene", GetColor(255, 255, 255));	
 	SceneBase::Draw();
 }
 
