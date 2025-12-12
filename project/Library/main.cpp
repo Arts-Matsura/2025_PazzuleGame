@@ -20,7 +20,7 @@
 #include "../Source/Screen.h"
 //#include "../ImGui/imgui_impl_dxlib.hpp"
 
-#define CoGVersion "4.5F"
+#define CoGVersion "4.5F"	//2.1 -> l—ÍXVÏ‚İ
 
 const char* Version() {
 	return CoGVersion;

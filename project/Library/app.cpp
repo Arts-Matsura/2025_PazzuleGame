@@ -31,7 +31,7 @@ void AppRelease()
 	//Time::Release();
 	SceneManager::Release();
 	ObjectManager::Release();
-	//ResourceLoader::Release();
+	ResourceLoader::Release();
 
 	OutputDebugStringA("---------- This app program is finished ----------\n");
 }

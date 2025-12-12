@@ -7,6 +7,7 @@ TileManager::TileManager()
 
 TileManager::~TileManager()
 {
+	DeleteTiles();
 }
 
 void TileManager::Update()
@@ -41,8 +42,13 @@ void TileManager::CreateTiles(int height, int width)
 			Tile* p = new Tile(id);
 			p->SetTile(Vector2I(w, h), 100.0f);
 			tile_list[h][w] = p;
+
+			id++;
 		}
 	}
+
+	// ÅŒã‚Ìƒ^ƒCƒ‹‚ð”ñ•\Ž¦‚É‚·‚é
+	tile_list[height - 1][width - 1]->transform.SetActive(false);
 }
 
 void TileManager::DeleteTiles()
@@ -56,4 +62,8 @@ void TileManager::DeleteTiles()
 		tile_list[h].clear();
 	}
 	tile_list.clear();
+}
+
+void TileManager::OnInputTile(const Vector2I& dir)
+{
 }

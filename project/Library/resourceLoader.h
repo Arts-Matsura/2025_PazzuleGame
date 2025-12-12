@@ -1,15 +1,31 @@
 #pragma once
 #include <string>
 
+/// <summary>
+/// 画像、モデル、音をロードする際、一度ロードものを、
+/// 再度ロードしないように、ここで保持しておく
+/// 
+/// DxLibの関数名と同じにしているので、その関数の前に、
+/// ResourceLoaderを書けばOK
+/// 
+/// ReleaseAllFile()を呼ぶと、ロードしたファイルを削除する
+/// </summary>
 namespace ResourceLoader {
+	/// <summary>
+	/// 全て初期化します
+	/// 最初に１回だけ呼んでください
+	/// </summary>
 	void Init();
+	void Release();
+
 	int LoadGraph(std::string filename);
-	void DeleteGraph(int handle);
+	//void DeleteGraph(int handle);
 	int MV1LoadModel(std::string filename);
-	void MV1DeleteModel(int handle);
+	//void MV1DeleteModel(int handle);
 	int LoadSoundMem(std::string filename);
-	void DeleteSoundMem(int handle);
-	void LoadFolderFile(std::string folder, bool loadSubFolder=false);
+	//void DeleteSoundMem(int handle);
+
+	void LoadFolderFile(std::string folder, bool loadSubFolder);
 
 	/// <summary>
 	/// 非同期読み込みをするかを設定する

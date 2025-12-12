@@ -15,8 +15,8 @@ public:
 
 //private:
 
-	int id;
-	Vector2I delta;
 	Transform transform;
+	Vector2I delta;	//¡‚Ìƒ}ƒX–Ú
+	int id;			//©•ª‚Ì”Ô†
 
 };

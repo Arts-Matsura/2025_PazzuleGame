@@ -4,7 +4,7 @@
 
 BootScene::BootScene()
 {
-	new ManagerController();
+	//new ManagerController();
 }
 
 BootScene::~BootScene()

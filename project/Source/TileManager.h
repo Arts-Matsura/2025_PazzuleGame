@@ -15,6 +15,8 @@ public:
 	void CreateTiles(int height, int width);
 	void DeleteTiles();
 
+	void OnInputTile(const Vector2I& dir);
+
 private:
 	std::vector<std::vector<Tile*>> tile_list;
 };
