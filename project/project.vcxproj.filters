@@ -111,6 +111,9 @@
     <ClCompile Include="Library\ObjectManager.cpp">
       <Filter>Library</Filter>
     </ClCompile>
+    <ClCompile Include="Source\cloudManager.cpp">
+      <Filter>z_bannnai</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -239,6 +242,9 @@
     </ClInclude>
     <ClInclude Include="Library\json.hpp">
       <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\cloudManager.h">
+      <Filter>z_bannnai</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

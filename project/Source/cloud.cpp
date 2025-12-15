@@ -1,4 +1,5 @@
 #include "cloud.h"
+#include "cloudManager.h"
 
 Cloud::Cloud()
 {
@@ -16,6 +17,3 @@ void Cloud::Draw()
 {
 }
 
-void Cloud::Create(int MaxBoard, int sideNum, int verNum)
-{
-}

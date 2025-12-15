@@ -9,9 +9,5 @@ public:
 	void Update()override;
 	void Draw()override;
 
-	void Create(int MaxBoard, int sideNum, int verNum);
-	void DeleteCloud();
-private:
-
-	std::vector<std::vector<bool>> isClouds;
+	bool isCloud;
 };

@@ -1,7 +1,8 @@
 #pragma once
 #include "../Library/sceneBase.h"
 
-class PlayScene : public SceneBase {
+class PlayScene : public 
+	SceneBase {
 public:
 	PlayScene();
 	~PlayScene();
