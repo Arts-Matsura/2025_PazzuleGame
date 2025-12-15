@@ -1,21 +1,26 @@
 #pragma once
-#include "../Library/gameObject.h"
+#include"../Library/gameObject.h"
+#include "ActionEvent.h"
 
-// WASD 入力だけを管理するクラス
+/// <summary>
+/// タイル操作
+/// </summary>
 class Control : public GameObject
 {
 public:
-    Control();
-    ~Control();
+	Control();
+	~Control();
 
-    void Update() override;
-    void Draw() override;
+	void Update()override;
+	void Draw()override;
 
-    // 取得（-1 / 0 / +1）
-    int GetHorizontal() const { return h; }  // A=-1 / D=+1
-    int GetVertical()   const { return v; }  // W=-1 / S=+1
+	ActionEvent<Vector2I> OnInputEvent;	// 入力イベント
 
 private:
-    int h = 0;  // 左右入力
-    int v = 0;  // 上下入力
+	void UpdateInput();
+	void OnKeyPush(Vector2I dir);
+
+
+	Vector2I currentKey;	// 今のキー入力
+	bool prevPushed;	// 前回の押下状態
 };

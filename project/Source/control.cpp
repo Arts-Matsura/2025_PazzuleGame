@@ -1,23 +1,49 @@
-#include "Control.h"
+#include "control.h"
 
-Control::Control() {}
-Control::~Control() {}
+Control::Control()
+{
+	prevPushed = false;
+	OnInputEvent += [this](Vector2I dir) { OnKeyPush(dir); };
+}
+
+Control::~Control()
+{
+}
 
 void Control::Update()
 {
-    h = 0;
-    v = 0;
-
-    // 左右
-    if (CheckHitKey(KEY_INPUT_A)) h = -1;
-    if (CheckHitKey(KEY_INPUT_D)) h = +1;
-
-    // 上下
-    if (CheckHitKey(KEY_INPUT_W)) v = -1;
-    if (CheckHitKey(KEY_INPUT_S)) v = +1;
+	UpdateInput();
 }
 
 void Control::Draw()
 {
-    // 描画は不要
+}
+
+void Control::UpdateInput()
+{
+	// キー入力の更新 (ななめ入力が許可されているので注意)
+	currentKey.y = CheckHitKey(KEY_INPUT_DOWN) - CheckHitKey(KEY_INPUT_UP);
+	currentKey.x = CheckHitKey(KEY_INPUT_RIGHT) - CheckHitKey(KEY_INPUT_LEFT);
+
+	// 押されているか判定
+	if (currentKey.x != 0 || currentKey.y != 0)
+	{
+		// 押された瞬間の処理
+		if (!prevPushed)
+		{
+			OnInputEvent.Invoke(currentKey);
+		}
+
+		prevPushed = true;
+	}
+	else
+	{
+		prevPushed = false;
+	}
+}
+
+void Control::OnKeyPush(Vector2I dir)
+{
+	//キーが押されたときの処理
+	DebugLog("キーが押されたよ! ");
 }
