@@ -1,10 +1,14 @@
 #include "bootScene.h"
 #include "../Library/sceneManager.h"
+#include "DebugScreen.h"
 #include "ManagerController.h"
 
 BootScene::BootScene()
 {
-	//new ManagerController();
+	SceneBase* common = SceneManager::CommonScene();
+	DebugScreen* ds = common->CreateGameObject<DebugScreen>();
+	common->SetDrawOrder(ds, 10000);
+	common->CreateGameObject<ManagerController>();
 }
 
 BootScene::~BootScene()

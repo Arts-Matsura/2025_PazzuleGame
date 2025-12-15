@@ -4,7 +4,7 @@
 #include <math.h>
 #include <string>
 #include "assert.h"
-#include "../Source/Screen.h"
+//#include "../Source/Screen.h"
 
 // --------------------------------------------------------- //
 //															 //
@@ -16,11 +16,11 @@
 // --------------------------------------------------------- //
 
 // Screen.hが存在しないので仮でここに定義
-//namespace Screen
-//{
-//	static const float WIDTH = 1600.0f;
-//	static const float HEIGHT = 1600.0f;
-//}
+namespace Screen
+{
+	static const float WIDTH = 1600.0f;
+	static const float HEIGHT = 1600.0f;
+}
 
 /* ==================== ポインタ削除関連 ==================== */
 

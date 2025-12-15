@@ -1,42 +1,38 @@
 #include "App.h"
-#include "SceneManager.h"
-#include "ObjectManager.h"
-#include "Time.h"
-#include "resourceLoader.h"
-#include <DxLib.h>
+#include "sceneManager.h"
+#include "time.h"
+
+bool exitFlag = false;
 
 void AppInit()
 {
-	ObjectManager::Init();
-	SceneManager::Init();
 	Time::Init();
-	ResourceLoader::Init();
+	SceneManager::Start();
+	exitFlag = false;
 }
 
 void AppUpdate()
 {
+	Time::Refresh();
 	SceneManager::Update();
-	ObjectManager::Update();
 }
 
 void AppDraw()
 {
-	Time::Refresh();
-	ObjectManager::Draw();
 	SceneManager::Draw();
 }
 
 void AppRelease()
 {
-	//Time::Release();
 	SceneManager::Release();
-	ObjectManager::Release();
-	ResourceLoader::Release();
-
-	OutputDebugStringA("---------- This app program is finished ----------\n");
 }
 
-bool AppIsExit()
+void Exit()
 {
-	return SceneManager::IsExit();
+	exitFlag = true;
+}
+
+bool IsExit()
+{
+	return exitFlag;
 }

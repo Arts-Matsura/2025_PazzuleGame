@@ -1,9 +1,8 @@
 #include "ManagerController.h"
 #include "SoundManager.h"
 
-ManagerController::ManagerController()
+ManagerController::ManagerController(SceneBase* scene) : GameObject(scene)
 {
-	this->DontDestroyOnSceneChange();
 	SoundManager::Init();
 }
 

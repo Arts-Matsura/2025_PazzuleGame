@@ -137,9 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Library\app.h" />
     <ClInclude Include="Library\gameObject.h" />
-    <ClInclude Include="Library\json.hpp" />
     <ClInclude Include="Library\myDxLib.h" />
-    <ClInclude Include="Library\ObjectManager.h" />
     <ClInclude Include="Library\resourceLoader.h" />
     <ClInclude Include="Library\sceneBase.h" />
     <ClInclude Include="Library\sceneManager.h" />
@@ -148,12 +146,16 @@
     <ClInclude Include="Source\bootScene.h" />
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\cloud.h" />
-    <ClInclude Include="Source\Screen.h" />
+    <ClInclude Include="Source\component.h" />
+    <ClInclude Include="Source\config.h" />
     <ClInclude Include="Source\control.h" />
     <ClInclude Include="Source\CsvReader.h" />
     <ClInclude Include="Source\dashParticle.h" />
+    <ClInclude Include="Source\debugScreen.h" />
     <ClInclude Include="Source\Fire.h" />
     <ClInclude Include="Source\GameMain.h" />
+    <ClInclude Include="Source\Goblin.h" />
+    <ClInclude Include="Source\Golem.h" />
     <ClInclude Include="Source\Ground.h" />
     <ClInclude Include="Source\Key.h" />
     <ClInclude Include="Source\Light.h" />
@@ -164,7 +166,6 @@
     <ClInclude Include="Source\Object3D.h" />
     <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\playScene.h" />
-    <ClInclude Include="Source\Renderer2D.h" />
     <ClInclude Include="Source\sceneFactory.h" />
     <ClInclude Include="Source\SingletonSample.h" />
     <ClInclude Include="Source\Sky.h" />
@@ -184,8 +185,8 @@
   <ItemGroup>
     <ClCompile Include="Library\app.cpp" />
     <ClCompile Include="Library\main.cpp" />
-    <ClCompile Include="Library\ObjectManager.cpp" />
     <ClCompile Include="Library\resourceLoader.cpp" />
+    <ClCompile Include="Library\sceneBase.cpp" />
     <ClCompile Include="Library\sceneManager.cpp" />
     <ClCompile Include="Library\time.cpp" />
     <ClCompile Include="Source\Animator.cpp" />
@@ -195,8 +196,11 @@
     <ClCompile Include="Source\control.cpp" />
     <ClCompile Include="Source\CsvReader.cpp" />
     <ClCompile Include="Source\dashParticle.cpp" />
+    <ClCompile Include="Source\debugScreen.cpp" />
     <ClCompile Include="Source\Fire.cpp" />
     <ClCompile Include="Source\GameMain.cpp" />
+    <ClCompile Include="Source\Goblin.cpp" />
+    <ClCompile Include="Source\Golem.cpp" />
     <ClCompile Include="Source\Ground.cpp" />
     <ClCompile Include="Source\Light.cpp" />
     <ClCompile Include="Source\Locus.cpp" />

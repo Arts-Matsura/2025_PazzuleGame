@@ -3,7 +3,7 @@
 
 class ManagerController : public GameObject {
 public:
-	ManagerController();
+	ManagerController(SceneBase* scene);
 	~ManagerController();
 	void Update() override;
 	void Draw() override;

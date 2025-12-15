@@ -27,7 +27,7 @@ void Control::UpdateInput()
 
 	// ‰Ÿ‚³‚ê‚Ä‚¢‚é‚©”»’è
 	if (currentKey.x != 0 || currentKey.y != 0)
-	{		
+	{
 		// ‰Ÿ‚³‚ê‚½uŠÔ‚Ìˆ—
 		if (!prevPushed)
 		{

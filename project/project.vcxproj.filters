@@ -20,6 +20,12 @@
     <ClCompile Include="Source\playScene.cpp">
       <Filter>PlayScene</Filter>
     </ClCompile>
+    <ClCompile Include="Source\debugScreen.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\sceneBase.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
     <ClCompile Include="Library\resourceLoader.cpp">
       <Filter>common</Filter>
     </ClCompile>
@@ -42,6 +48,12 @@
       <Filter>PlayScene\Main</Filter>
     </ClCompile>
     <ClCompile Include="Source\CsvReader.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Goblin.cpp">
+      <Filter>PlayScene\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Golem.cpp">
       <Filter>PlayScene\Main</Filter>
     </ClCompile>
     <ClCompile Include="Source\Ground.cpp">
@@ -99,21 +111,16 @@
     <ClCompile Include="Source\TileManager.cpp">
       <Filter>TitleScene</Filter>
     </ClCompile>
+    <ClCompile Include="Source\TIle.cpp" />
     <ClCompile Include="Source\control.cpp">
       <Filter>tamada</Filter>
     </ClCompile>
     <ClCompile Include="Source\cloud.cpp">
       <Filter>z_bannnai</Filter>
     </ClCompile>
-    <ClCompile Include="Source\TIle.cpp">
-      <Filter>TitleScene</Filter>
-    </ClCompile>
-    <ClCompile Include="Library\ObjectManager.cpp">
-      <Filter>Library</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Screen.h" />
+    <ClInclude Include="Source\config.h" />
     <ClInclude Include="Source\sceneFactory.h" />
     <ClInclude Include="Library\app.h">
       <Filter>Library</Filter>
@@ -133,8 +140,14 @@
     <ClInclude Include="Source\playScene.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
+    <ClInclude Include="Source\debugScreen.h">
+      <Filter>common</Filter>
+    </ClInclude>
     <ClInclude Include="Library\myDxLib.h">
       <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\component.h">
+      <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="Library\resourceLoader.h">
       <Filter>common</Filter>
@@ -161,6 +174,12 @@
       <Filter>PlayScene\Main</Filter>
     </ClInclude>
     <ClInclude Include="Source\CsvReader.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Goblin.h">
+      <Filter>PlayScene\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Golem.h">
       <Filter>PlayScene\Main</Filter>
     </ClInclude>
     <ClInclude Include="Source\Ground.h">
@@ -230,15 +249,6 @@
     </ClInclude>
     <ClInclude Include="Source\cloud.h">
       <Filter>z_bannnai</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Renderer2D.h">
-      <Filter>TitleScene</Filter>
-    </ClInclude>
-    <ClInclude Include="Library\ObjectManager.h">
-      <Filter>Library</Filter>
-    </ClInclude>
-    <ClInclude Include="Library\json.hpp">
-      <Filter>Library</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
