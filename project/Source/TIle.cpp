@@ -23,6 +23,8 @@ void Tile::SetTile(const Vector2I& _delta, float tileSize)
 
 void Tile::Draw()
 {
+	if(transform.is_active == false) { return; }
+
 	Vector2 pos = Vector2(transform.position + transform.scale);
 	Renderer::Text(pos, Color::White(), std::to_string(id));
 }
